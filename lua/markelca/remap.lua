@@ -38,7 +38,7 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
@@ -58,15 +58,31 @@ vim.keymap.set("n", "<leader>rc", vim.cmd.tabnew)
 
 -- Movement DVORAK  remap
 
+-- Undo
+vim.keymap.set({ "n", "v" }, ",", "u")
 -- Down
--- vim.keymap.set("n", "h", "j<CR>")
--- vim.keymap.set("n", "u", "j<CR>")
---
--- -- Left
--- vim.keymap.set("n", "n", "h<CR>")
--- vim.keymap.set("n", "o", "h<CR>")
---
---
--- -- Up
--- vim.keymap.set("n", "t", "k<CR>")
--- vim.keymap.set("n", "e", "k<CR>")
+vim.keymap.set({ "n", "v" }, "h", "j")
+vim.keymap.set({ "n", "v" }, "u", "j")
+vim.keymap.set({ "n", "v" }, "H", "10j")
+-- Left
+vim.keymap.set({ "n", "v" }, "n", "h")
+-- vim.keymap.set({"n", "v"}, "o", "h")
+vim.keymap.set({ "n", "v" }, "k", "b")
+-- Right
+vim.keymap.set({ "n", "v" }, "s", "l")
+vim.keymap.set({ "n", "v" }, "a", "l")
+vim.keymap.set({ "n", "v" }, "q", "w")
+-- Up
+vim.keymap.set({ "n", "v" }, "t", "k")
+vim.keymap.set({ "n", "v" }, "e", "k")
+vim.keymap.set({ "n", "v" }, "T", "10k")
+-- Next Ocurrence
+vim.keymap.set({ "n", "v" }, ";", "n")
+-- Previous Ocurrence
+vim.keymap.set({ "n", "v" }, "<C-;>", "N")
+-- Remove highlighted text
+vim.keymap.set({ "n", "v" }, "<leader>h", vim.cmd.noh)
+
+
+-- Terminal prompt
+vim.keymap.set("n", "C", ":! ")

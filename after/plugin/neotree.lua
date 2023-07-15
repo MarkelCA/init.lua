@@ -40,4 +40,11 @@ require("neo-tree").setup({
     },
   },
   -- Other options ...
+  window = {
+      mappings = {
+          ["t"] = "j",
+          ["e"] = "k",
+          ["o"] = "open"
+      }
+  }
 })

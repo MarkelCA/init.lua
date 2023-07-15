@@ -1,4 +1,4 @@
-vim.keymap.set('n', 's', "<Plug>(easymotion-overwin-f2)");
+vim.keymap.set('n', '<leader>s', "<Plug>(easymotion-overwin-f2)");
 
 
 
