@@ -8,7 +8,7 @@ require("neo-tree").setup({
     git_status = {
       symbols = {
         renamed   = "󰁕",
-        unstaged  = "󰄱",
+        unstaged  = "u",
       },
     },
   },
@@ -40,11 +40,17 @@ require("neo-tree").setup({
     },
   },
   -- Other options ...
-  window = {
-      mappings = {
-          ["t"] = "j",
-          ["e"] = "k",
-          ["o"] = "open"
+  filesystem = {
+      window = {
+          mappings = {
+              ["t"] = "none",
+              ["H"] = "none",
+              ["o"] = "open",
+              [";"] = "toggle_hidden",
+          }
       }
   }
+
 })
+
+
