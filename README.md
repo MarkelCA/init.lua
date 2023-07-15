@@ -1,4 +1,4 @@
-# nvim-lua-hero
+# init.lua
 Rebuilding my nvim config with Lua. (Inpired by @ThePrimeagen)
 
 ## Dependencies
