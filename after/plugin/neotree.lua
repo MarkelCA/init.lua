@@ -1,3 +1,4 @@
+vim.keymap.set("n", "<leader>nt", vim.cmd.Neotree)
 require("neo-tree").setup({
   default_component_configs = {
     icon = {
