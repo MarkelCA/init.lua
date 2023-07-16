@@ -32,3 +32,4 @@ vim.opt.colorcolumn = "80"
 
 vim.o.foldmethod = "marker"
 vim.o.foldmarker = "{,}"
+vim.o.foldenable = false
