@@ -47,6 +47,7 @@ require("neo-tree").setup({
               ["H"] = "none",
               ["o"] = "open",
               [";"] = "toggle_hidden",
+              ["<C-T>"] = "open_tabnew",
           }
       },
       follow_current_file = {
