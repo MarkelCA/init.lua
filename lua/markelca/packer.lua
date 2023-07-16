@@ -60,7 +60,7 @@ return require('packer').startup(function(use)
   use ({
       "nvim-neo-tree/neo-tree.nvim",
       branch = "v2.x",
-      requires = { 
+      requires = {
           "nvim-lua/plenary.nvim",
           "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
           "MunifTanjim/nui.nvim",
@@ -73,5 +73,16 @@ return require('packer').startup(function(use)
           require('Comment').setup()
       end
   }
+
+  use ({
+      'mg979/vim-visual-multi',
+      branch = 'master',
+      config = function()
+          vim.g.VM_default_mappings=0
+          vim.g.VM_maps = {
+              ["Find Under"] = "<C-m>"
+          }
+      end,
+  })
 
 end)
