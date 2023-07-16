@@ -48,6 +48,9 @@ require("neo-tree").setup({
               ["o"] = "open",
               [";"] = "toggle_hidden",
           }
+      },
+      follow_current_file = {
+          enabled = true
       }
   }
 
