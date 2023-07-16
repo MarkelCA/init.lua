@@ -1,3 +1,4 @@
+-- All configs available at: https://github.com/nvim-neo-tree/neo-tree.nvim/blob/main/lua/neo-tree/defaults.lua
 vim.keymap.set("n", "<leader>nt", vim.cmd.Neotree)
 require("neo-tree").setup({
   default_component_configs = {
@@ -51,7 +52,15 @@ require("neo-tree").setup({
           }
       },
       follow_current_file = {
-          enabled = true
+          enabled = true,
+      }
+  },
+  event_handlers = {
+      {
+          event = "file_opened",
+          handler = function (file_path)
+              require("neo-tree").close_all()
+          end
       }
   }
 
