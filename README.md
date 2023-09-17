@@ -31,7 +31,9 @@ Install Jetbrains Mono font from [NerdFonts](https://www.nerdfonts.com/font-down
 ```bash
 mkdir -p ~/.local/share/fonts/ttf
 cd ~/.local/share/fonts/ttf
-unzip <your/downloaded/path/JetBrainsMono.zip> 
+unzip <your/downloaded/path/JetBrainsMono.zip>
+# Add the font to your terminal configuration
 ```
+In my case it's already added into [my Alacritty config](https://gist.github.com/MarkelCA/a2e7be7979131855b311e3586d333cd9)
 ## Preview
 ![image](https://github.com/MarkelCA/init.lua/assets/76633510/97e7e3ee-779a-4bf6-9919-3ad77940b7d8)
